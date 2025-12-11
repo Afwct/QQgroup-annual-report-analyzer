@@ -23,8 +23,13 @@ git clone https://github.com/ZiHuixi/QQgroup-annual-report-analyzer.git
 cd QQgroup-annual-report-analyzer
 ```
 ### 2. 安装依赖
-```bash
+```bash 
 pip install -r requirements.txt
+```
+或者使用 `uv`
+```bash
+uv init
+uv add -r requirements.txt  
 ```
 ### 3. 配置
 
@@ -42,7 +47,11 @@ vim config.py  # 或用其他编辑器
 pip install playwright
 playwright install chromium
 ```
-
+或者使用 `uv` 安装 Playwright：
+```bash
+uv tool install playwright
+playwright install chromium
+```
 
 ## 🚀 使用方法
 
@@ -58,6 +67,10 @@ python main.py
 
 # 方式2：指定输入文件
 python main.py your_chat.json
+```
+或者使用 `uv`
+```bash
+uv run main.py
 ```
 
 ### 配置说明
